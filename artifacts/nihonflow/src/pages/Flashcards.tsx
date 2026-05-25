@@ -53,11 +53,12 @@ export default function Flashcards() {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentVocab.id}
-              initial={{ opacity: 0, x: 50, scale: 0.9 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              exit={{ opacity: 0, x: -50, scale: 0.9 }}
-              transition={{ duration: 0.3 }}
+              initial={{ x: 60, scale: 0.95 }}
+              animate={{ x: 0, scale: 1 }}
+              exit={{ x: -60, scale: 0.95 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
               className="absolute inset-0 w-full"
+              style={{ opacity: 1 }}
             >
               <FlipCard 
                 vocab={currentVocab} 
