@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/mobile/"
+title = "NihonFlow Mobile"
+version = "1.0.0"
+id = "artifacts/nihonflow-mobile"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+name = "expo"
+paths = [ "/mobile/" ]
+localPort = 24190
+
+[services.development]
+run = "pnpm --filter @workspace/nihonflow-mobile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/nihonflow-mobile", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/nihonflow-mobile", "run", "serve" ]
+
+[services.env]
+PORT = "24190"
+BASE_PATH = "/mobile/"

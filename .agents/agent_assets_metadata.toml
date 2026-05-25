@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "Ssze7wsUfh8uMZziiVfcF"
+uri = "file://artifacts/nihonflow-mobile/assets/images/icon.png"
+type = "image"
+title = "nihonflow app icon"

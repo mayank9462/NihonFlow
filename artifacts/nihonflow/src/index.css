@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap');
+@layer theme, base, clerk, components, utilities;
 @import "tailwindcss";
+@import '@clerk/themes/shadcn.css';
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
 
@@ -239,4 +241,13 @@
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
   }
+}
+/* Clerk pseudo-state styles — must be outside any @layer */
+.cl-formFieldInput::placeholder {
+  color: hsl(215, 20%, 40%);
+  opacity: 1;
+}
+.cl-otpCodeFieldInput::placeholder {
+  color: hsl(215, 20%, 40%);
+  opacity: 1;
 }

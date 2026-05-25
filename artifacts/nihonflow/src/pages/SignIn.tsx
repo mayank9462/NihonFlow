@@ -1,0 +1,20 @@
+import { SignIn } from "@clerk/react";
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+export default function SignInPage() {
+  return (
+    <div className="relative flex min-h-[100dvh] items-center justify-center bg-background px-4 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/10 pointer-events-none" />
+      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-purple-500/8 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-20 w-64 h-64 bg-blue-500/8 rounded-full blur-3xl pointer-events-none" />
+      <div className="relative z-10 w-full max-w-[440px]">
+        <SignIn
+          routing="path"
+          path={`${basePath}/sign-in`}
+          signUpUrl={`${basePath}/sign-up`}
+        />
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" fill="none">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon background glow -->
+  <circle cx="32" cy="32" r="28" fill="url(#glow)"/>
+
+  <!-- Stylized 日 kanji (Japanese character for sun/day/Japan) -->
+  <rect x="18" y="13" width="28" height="38" rx="3" stroke="url(#grad)" stroke-width="2.5" fill="none"/>
+  <line x1="18" y1="25" x2="46" y2="25" stroke="url(#grad)" stroke-width="2.5"/>
+  <line x1="18" y1="38" x2="46" y2="38" stroke="url(#grad)" stroke-width="2.5"/>
+
+  <!-- App name -->
+  <text x="72" y="27" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="white" letter-spacing="-0.3">NihonFlow</text>
+
+  <!-- Japanese subtitle -->
+  <text x="73" y="46" font-family="Noto Sans JP, Inter, sans-serif" font-size="10" fill="url(#grad)" letter-spacing="3">日本語学習</text>
+</svg>
