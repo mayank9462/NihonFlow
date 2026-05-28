@@ -480,13 +480,73 @@
 // export default App;
 
 
+
+import { ClerkProvider, SignedIn, SignedOut } from "@clerk/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Switch, Route, Redirect } from "wouter";
+
+import Landing from "@/pages/Landing";
 import Dashboard from "@/pages/Dashboard";
 
+const queryClient = new QueryClient();
+
+const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+
 function App() {
-  return <Dashboard />;
+  return (
+    <ClerkProvider publishableKey={clerkPubKey}>
+      <QueryClientProvider client={queryClient}>
+        <Switch>
+          <Route path="/">
+            <SignedOut>
+              <Landing />
+            </SignedOut>
+
+            <SignedIn>
+              <Redirect to="/dashboard" />
+            </SignedIn>
+          </Route>
+
+          <Route path="/dashboard">
+            <SignedIn>
+              <Dashboard />
+            </SignedIn>
+
+            <SignedOut>
+              <Redirect to="/" />
+            </SignedOut>
+          </Route>
+        </Switch>
+      </QueryClientProvider>
+    </ClerkProvider>
+  );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import Dashboard from "@/pages/Dashboard";
+
+// function App() {
+//   return <Dashboard />;
+// }
+
+// export default App;
 
 
 // import Landing from "@/pages/Landing";
