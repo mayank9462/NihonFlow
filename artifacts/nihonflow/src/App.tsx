@@ -481,26 +481,32 @@
 
 
 
-
-
-
+import Landing from "@/pages/Landing";
 
 function App() {
-  return (
-    <div
-      style={{
-        background: "#111",
-        color: "white",
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        fontSize: "40px",
-      }}
-    >
-      NihonFlow is Working 🚀
-    </div>
-  );
+  return <Landing />;
 }
+
+export default App;
+
+
+
+// function App() {
+//   return (
+//     <div
+//       style={{
+//         background: "#111",
+//         color: "white",
+//         minHeight: "100vh",
+//         display: "flex",
+//         justifyContent: "center",
+//         alignItems: "center",
+//         fontSize: "40px",
+//       }}
+//     >
+//       NihonFlow is Working 🚀
+//     </div>
+//   );
+// }
 
 export default App;
