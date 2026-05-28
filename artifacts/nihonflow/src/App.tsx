@@ -480,14 +480,22 @@
 // export default App;
 
 
-
-import Landing from "@/pages/Landing";
+import Dashboard from "@/pages/Dashboard";
 
 function App() {
-  return <Landing />;
+  return <Dashboard />;
 }
 
 export default App;
+
+
+// import Landing from "@/pages/Landing";
+
+// function App() {
+//   return <Landing />;
+// }
+
+// export default App;
 
 
 
